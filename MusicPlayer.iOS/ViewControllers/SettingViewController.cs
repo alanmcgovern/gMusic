@@ -58,6 +58,10 @@ namespace MusicPlayer.iOS.ViewControllers
 						ReloadData();
 
 					}),
+					new AccountCell(ServiceType.Tunez,async ()=>{
+						await ApiManager.Shared.LogInOut(ServiceType.Tunez);
+						ReloadData();
+					}),
 
 					(lastFmElement = string.IsNullOrEmpty (ApiConstants.LastFmApiKey) ? null : new SettingsSwitch("Last.FM", Settings.LastFmEnabled)),
 					(twitterScrobbleElement = new SettingsSwitch("Auto Tweet", Settings.TwitterEnabled){Detail = Settings.TwitterDisplay}),
