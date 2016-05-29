@@ -14,5 +14,6 @@ namespace MusicPlayer.Api
 		FileSystem = 6,
 		SoundCloud = 7,
 		OneDrive,
+		Tunez,
     }
 }

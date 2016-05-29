@@ -446,6 +446,10 @@
     <Compile Include="ViewControllers\AutoPlaylistSongsViewController.cs" />
     <BundleResource Include="Resources\SVG\dice.svg" />
     <Compile Include="Native\AutolockPowerWatcher.cs" />
+    <Compile Include="Tunez\TunezApi.cs" />
+    <Compile Include="Tunez\TunezProvider.cs" />
+    <Compile Include="Tunez\TunezProvider.Radio.cs" />
+    <BundleResource Include="Resources\SVG\tunez.svg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -659,6 +663,8 @@
   </ItemGroup>
   <Import Project="..\ApiConstants.targets" />
   <Import Project="..\MusicPlayer.Apple\MusicPlayer.Apple.projitems" Label="Shared" Condition="Exists('..\MusicPlayer.Apple\MusicPlayer.Apple.projitems')" />
+  <Import Project="..\..\tunez\Shared\TunezCore\TunezCore.projitems" Label="Shared" Condition="Exists('..\..\tunez\Shared\TunezCore\TunezCore.projitems')" />
+  <Import Project="..\..\tunez\Client\TunezClientCore\TunezClientCore.projitems" Label="Shared" Condition="Exists('..\..\tunez\Client\TunezClientCore\TunezClientCore.projitems')" />
   <Import Project="..\Api\SoundCloud\SoundCloud.projitems" Label="Shared" Condition="Exists('..\Api\SoundCloud\SoundCloud.projitems')" />
   <Import Project="..\Api\gMusicApi\gMusicApi.projitems" Label="Shared" />
   <Import Project="..\Api\AmazonApi\AmazonApi.projitems" Label="Shared" />
@@ -749,6 +755,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewControllers\Car\" />
+    <Folder Include="Tunez\" />
   </ItemGroup>
   <Import Project="..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />
 </Project>
